@@ -12,7 +12,6 @@ export const setLocalStorage = (key, data) => {
 };
 
 export const getLocalStorage = (key) => {
-  const user = GetCookie("activeUserID");
   try {
     return JSON.parse(localStorage.getItem(key) ?? null);
   } catch (e) {

@@ -1,9 +1,15 @@
 import { Card } from "antd";
+import Stopwatch from "./stopWatch/reactStopWatch";
 
-const VerticalCard = () => {
+const VerticalCard = ({ task }: any) => {
+  const taskName = task ? task : "Task 1";
   return (
     <>
-      <Card>ok</Card>
+      <Card>
+        <div className="flex justify-between items-center">
+          <div>{taskName}</div> <Stopwatch taskName={taskName} />
+        </div>
+      </Card>
     </>
   );
 };
